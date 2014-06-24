@@ -17,25 +17,25 @@
          point="org.eclipse.ui.commands">
       <category
             id="perl6-editor.commands.category"
-            name="Sample Category">
+            name="Perl 6">
       </category>
       <command
             categoryId="perl6-editor.commands.category"
-            id="perl6-editor.commands.sampleCommand"
-            name="Sample Command">
+            id="perl6-editor.commands.eval"
+            name="Evaluate Perl 6">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
             class="perl6editor.handlers.EvalHandler"
-            commandId="perl6-editor.commands.sampleCommand">
+            commandId="perl6-editor.commands.eval">
       </handler>
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="perl6-editor.commands.sampleCommand"
+            commandId="perl6-editor.commands.eval"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+6">
@@ -46,12 +46,12 @@
       <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
-               id="perl6-editor.menus.sampleMenu"
-               label="Sample Menu"
+               id="perl6-editor.menus.perl6"
+               label="Perl 6"
                mnemonic="M">
             <command
-                  commandId="perl6-editor.commands.sampleCommand"
-                  id="perl6-editor.menus.sampleCommand"
+                  commandId="perl6-editor.commands.eval"
+                  id="perl6-editor.menus.eval"
                   mnemonic="S">
             </command>
          </menu>
@@ -59,12 +59,12 @@
       <menuContribution
             locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
          <toolbar
-               id="perl6-editor.toolbars.sampleToolbar">
+               id="perl6-editor.toolbars.perl6">
             <command
-                  commandId="perl6-editor.commands.sampleCommand"
+                  commandId="perl6-editor.commands.eval"
                   icon="icons/cameliafav.png"
-                  id="perl6-editor.toolbars.sampleCommand"
-                  tooltip="Say hello world">
+                  id="perl6-editor.toolbars.eval"
+                  tooltip="Evaluate Perl 6">
             </command>
          </toolbar>
       </menuContribution>
